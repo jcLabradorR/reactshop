@@ -9,6 +9,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -50,6 +51,7 @@ module.exports = {
     devServer: {
         //content base se usa en webpack 4
        //contentBase: path.join(__dirname, 'dist'),
+       historyApiFallback: true,
        allowedHosts: path.join(__dirname, 'dist'),
        compress: true,
        port: 3005,
